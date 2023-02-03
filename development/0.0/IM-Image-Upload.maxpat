@@ -45,8 +45,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 401.0, 584.0, 177.0, 22.0 ],
-					"text" : "vexpr floor($f1) @scalarmode 1"
+					"patching_rect" : [ 385.0, 568.0, 145.0, 22.0 ],
+					"text" : "vexpr $i1 @scalarmode 1"
 				}
 
 			}
@@ -119,8 +119,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 85.0, 575.0, 221.0, 22.0 ],
-					"text" : "255. 89.21403 83.469251 67.002008"
+					"patching_rect" : [ 129.0, 563.0, 221.0, 22.0 ],
+					"text" : "255. 87.648271 83.356898 86.623301"
 				}
 
 			}
@@ -145,7 +145,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 351.0, 522.00000524520874, 50.0, 35.0 ],
-					"text" : "18.8516"
+					"text" : "55.5134"
 				}
 
 			}
@@ -717,8 +717,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -796,6 +794,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-22", 1 ],
+					"order" : 1,
+					"source" : [ "obj-20", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-37", 0 ],
+					"order" : 0,
 					"source" : [ "obj-20", 1 ]
 				}
 
@@ -819,7 +826,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"order" : 5,
+					"order" : 4,
 					"source" : [ "obj-24", 1 ]
 				}
 
@@ -829,14 +836,6 @@
 					"destination" : [ "obj-20", 0 ],
 					"order" : 0,
 					"source" : [ "obj-24", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-37", 0 ],
-					"order" : 4,
-					"source" : [ "obj-24", 1 ]
 				}
 
 			}
