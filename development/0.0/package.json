@@ -1,7 +1,6 @@
 {
   "name": "upload-image",
   "version": "1.0.0",
-  "description": "",
   "main": "IM-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +16,6 @@
     "qrcode": "^1.5.1",
     "sharp": "^0.31.3",
     "sharp-multer": "^0.2.5"
-  }
+  },
+  "description": ""
 }
