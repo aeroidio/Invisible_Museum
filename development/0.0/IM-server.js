@@ -3,7 +3,7 @@
 const express = require("express")
 const path = require("path")
 const multer = require("multer")
-const SharpMulter = require("sharp-multer")
+const sharp = require('sharp')
 const app = express()
 const fs = require('fs')
 const QRCode = require('qrcode');
@@ -16,57 +16,56 @@ const port = process.env.PORT || 3000;
 //app.use(express.static(__dirname + "/public"));
 
 //console.log(ip.address())
-function qr(){
-    console.log('url',`http://${ip.address()}:${port}`)
+function qr() {
+    console.log('url', `http://${ip.address()}:${port}`)
     QRCode.toFile('qr.png', `http://${ip.address()}:${port}`, {
-            color: {
+        color: {
             dark: '#000000',  // Blue dots
             light: '#FFFFFF' // Transparent background
-            }
-        }, function (err) {
-            if (err) throw err
-            console.log('done')
-        })
-
-    }
-
-
-const storage =  
- SharpMulter ({
-              destination:(req, file, callback) =>callback(null, "img"),
-              
-              imageOptions:{
-               fileFormat: "jpg",
-               //quality: 80,
-               //resize: { width: 500, height: 500 },
-                 }
-           });
-const upload  =  multer({ storage });
-
-app.post("/upload", upload.single("avatar"), async  (req, res)  => {
-    console.log(req.file);
-    return  res.json("File Uploaded Successfully!");
+        }
+    }, function (err) {
+        if (err) throw err
+        console.log('done')
     })
-    
-app.get('/', function(req, res) {
+
+}
+
+
+
+const storage = multer.diskStorage({
+    destination: (req, file, callback) => callback(null, 'img'),
+    filename: (req, file, callback) => callback(null, file.originalname)
+
+})
+const upload = multer({ storage });
+
+
+app.post("/upload", upload.single("avatar"), (req, res) => {
+    sharp(req.file.path).withMetadata().toBuffer();
+    console.log(req.file);
+    return res.json("File Uploaded Successfully!");
+})
+
+app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
-    });
-    
-    
+});
+
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`)
-    })
+})
 
 fs.watch(__dirname + "/img", (eventType, filename) => {
     //console.log(eventType);
     // could be either 'rename' or 'change'. new file event and delete
     // also generally emit 'rename'
-    console.log("new_image",__dirname + "/img/" + filename);
-    })
+    console.log("new_image", __dirname + "/img/" + filename);
+})
 
 
- maxApi.addHandlers({
-        qr: (ip) => (
-            qr(ip)
-        )}
+maxApi.addHandlers({
+    qr: (ip) => (
+        qr(ip)
+    )
+}
 )

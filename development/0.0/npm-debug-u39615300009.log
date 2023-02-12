@@ -1,0 +1,17 @@
+npm ERR! As of npm@5, the npm cache self-heals from corruption issues
+npm ERR! by treating integrity mismatches as cache misses.  As a result,
+npm ERR! data extracted from the cache is guaranteed to be valid.  If you
+npm ERR! want to make sure everything is consistent, use `npm cache verify`
+npm ERR! instead.  Deleting the cache can only make npm go slower, and is
+npm ERR! not likely to correct any problems you may be encountering!
+npm ERR! 
+npm ERR! On the other hand, if you're debugging an issue with the installer,
+npm ERR! or race conditions that depend on the timing of writing to an empty
+npm ERR! cache, you can use `npm install --cache /tmp/empty-cache` to use a
+npm ERR! temporary cache instead of nuking the actual one.
+npm ERR! 
+npm ERR! If you're sure you want to delete the entire cache, rerun this command
+npm ERR! with --force.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/sllewmas/.npm/_logs/2023-02-12T14_38_28_275Z-debug.log
