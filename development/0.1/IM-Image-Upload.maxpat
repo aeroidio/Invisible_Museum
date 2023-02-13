@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -3522.0, 237.0, 1289.0, 971.0 ],
+		"rect" : [ -1894.0, -125.0, 1289.0, 971.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -280,7 +280,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -3522.0, 263.0, 1289.0, 945.0 ],
+						"rect" : [ 0.0, 26.0, 1289.0, 945.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2651,7 +2651,7 @@
 										}
 ,
 										"classnamespace" : "box",
-										"rect" : [ -3613.0, 1065.0, 640.0, 480.0 ],
+										"rect" : [ -2974.0, 1065.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -3004,6 +3004,8 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
+										"node_bin_path" : "",
+										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -3401,6 +3403,19 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1079.0, 83.083333492279053, 192.0, 31.0 ],
 					"text" : "Launch the webpage"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 721.0, 519.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 674.0, 371.0, 150.0, 20.0 ],
+					"text" : "drag and drop image here"
 				}
 
 			}
